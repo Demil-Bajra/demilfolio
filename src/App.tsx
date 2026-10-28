@@ -155,7 +155,7 @@ function ProjectPreview({ variant }: { variant: string }) {
         <div className="focus-layout">
           <div className="focus-sidebar"><i /><i /><i /><i /></div>
           <div className="focus-content">
-            <div className="focus-heading"><span>Good morning, Demil</span><small>Tuesday · 09:41</small></div>
+            <div className="focus-heading"><span>Good morning, {personalLinks.fullName}</span><small>Tuesday · 09:41</small></div>
             <div className="focus-stats"><b>04</b><b>02</b><b>78%</b></div>
             <div className="focus-lines"><i /><i /><i /><i /></div>
           </div>
@@ -270,7 +270,7 @@ function App() {
         <div className="container nav-inner">
           <button className="brand" onClick={() => scrollTo('home')} aria-label="Go to home">
             <span className="brand-mark">DB</span>
-            <span className="brand-name">Demil Bajra</span>
+            <span className="brand-name">{personalLinks.fullName}</span>
           </button>
           <nav id="primary-navigation" className={`main-nav ${mobileOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
             {navItems.map((item) => (
@@ -400,7 +400,7 @@ function App() {
               <p>My coding activity and projects as I continue learning and building.</p>
             </SectionIntro>
             <div className="github-placeholder">
-              <a className="github-placeholder-top github-profile-link" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's GitHub profile"><GithubMark size={26} /><span>github.com / Demil-Bajra</span><span className="availability-tag">view profile</span></a>
+              <a className="github-placeholder-top github-profile-link" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${personalLinks.fullName}'s GitHub profile`}><GithubMark size={26} /><span>github.com / Demil-Bajra</span><span className="availability-tag">view profile</span></a>
               <div className="github-placeholder-note"><GithubMark size={22} /><span>Contribution data will appear here once a live data source is connected.</span></div>
               <div className="github-placeholder-bottom"><span>Account-specific statistics will appear here when a live data source is connected.</span><span className="placeholder-link">Live data ready later</span></div>
             </div>
@@ -417,11 +417,11 @@ function App() {
                 <div className="contact-lead"><span className="contact-number">08 / 08</span><h3>Have a question,<br /><em>idea, or hello?</em></h3></div>
                 <div className="contact-list">
                   <a className="contact-item contact-link-row" href={`mailto:${personalLinks.email}`} aria-label={`Email ${personalLinks.email}`}><span><Mail size={17} /><small>Email</small></span><strong>{personalLinks.email}</strong><ArrowUpRight size={15} /></a>
-                  <a className="contact-item contact-link-row" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's GitHub profile"><span><GithubMark size={17} /><small>GitHub</small></span><strong>{personalLinks.github.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
-                  <a className="contact-item contact-link-row" href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's LinkedIn profile"><span><LinkedinMark size={17} /><small>LinkedIn</small></span><strong>{personalLinks.linkedin.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
+                  <a className="contact-item contact-link-row" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${personalLinks.fullName}'s GitHub profile`}><span><GithubMark size={17} /><small>GitHub</small></span><strong>{personalLinks.github.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
+                  <a className="contact-item contact-link-row" href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${personalLinks.fullName}'s LinkedIn profile`}><span><LinkedinMark size={17} /><small>LinkedIn</small></span><strong>{personalLinks.linkedin.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
                   <div className="contact-item"><span><MapPin size={17} /><small>Location</small></span><strong>{personalLinks.location}</strong><span className="muted-arrow">↗</span></div>
                 </div>
-                <a className="email-alternative" href={`mailto:${personalLinks.email}?subject=Hello%20Demil`}>Prefer email? Write directly <ArrowUpRight size={15} /></a>
+                <a className="email-alternative" href={`mailto:${personalLinks.email}?subject=Hello%20${encodeURIComponent(personalLinks.fullName)}`}>Prefer email? Write directly <ArrowUpRight size={15} /></a>
               </div>
               <form className="contact-form" onSubmit={handleSubmit} noValidate>
                 <div className="form-header"><span>Drop me a message</span><MessageCircle size={18} strokeWidth={1.5} /></div>
@@ -441,8 +441,8 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <div className="container footer-top"><button className="brand footer-brand" onClick={() => scrollTo('home')}><span className="brand-mark">DB</span><span className="brand-name">Demil Bajra</span></button><p>Built with curiosity and a commitment to continuous learning.</p><button className="back-top" onClick={() => scrollTo('home')}>Back to top <MoveUpRight size={15} /></button></div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Demil Bajra</span><span>BCA Student · Aspiring Software Developer</span><div><button onClick={() => scrollTo('about')}>About</button><button onClick={() => scrollTo('projects')}>Projects</button><button onClick={() => scrollTo('contact')}>Contact</button><a href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><GithubMark size={13} /></a><a href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"><LinkedinMark size={13} /></a></div></div>
+        <div className="container footer-top"><button className="brand footer-brand" onClick={() => scrollTo('home')}><span className="brand-mark">DB</span><span className="brand-name">{personalLinks.fullName}</span></button><p>Built with curiosity and a commitment to continuous learning.</p><button className="back-top" onClick={() => scrollTo('home')}>Back to top <MoveUpRight size={15} /></button></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} {personalLinks.fullName}</span><span>BCA Student · Aspiring Software Developer</span><div><button onClick={() => scrollTo('about')}>About</button><button onClick={() => scrollTo('projects')}>Projects</button><button onClick={() => scrollTo('contact')}>Contact</button><a href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><GithubMark size={13} /></a><a href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"><LinkedinMark size={13} /></a></div></div>
       </footer>
     </div>
   );

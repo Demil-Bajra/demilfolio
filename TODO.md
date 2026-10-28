@@ -1,4 +1,4 @@
-# Demil Bajra portfolio outcomes
+# Demil Bajracharya portfolio outcomes
 
 ## Responsive portfolio shell and navigation
 - [x] Deliver a complete, polished, responsive developer portfolio rather than a static screenshot.
@@ -7,7 +7,7 @@
 - [x] Prevent the navbar from obscuring section headings and support desktop, tablet, and mobile layouts without horizontal overflow.
 
 ## Honest personal content and introduction
-- [x] Present Demil Bajracharya / Demil Bajra as a BCA Student, Aspiring Software Developer, and Technology Enthusiast in Kathmandu, Nepal.
+- [x] Present Demil Bajracharya as a BCA Student, Aspiring Software Developer, and Technology Enthusiast in Kathmandu, Nepal.
 - [x] Include the supplied hero introduction, the tagline “Learning continuously. Building thoughtfully.”, View My Work and Contact Me actions, and clearly labeled GitHub/LinkedIn placeholders without inventing profile URLs.
 - [x] Include an About Me section with truthful paragraphs and the themes Problem Solving, Building, and Continuous Learning without unsupported claims.
 
@@ -25,7 +25,7 @@
 ## Contact and footer
 - [x] Include Let's Connect with Kathmandu, Nepal, labeled email/GitHub/LinkedIn placeholders, and an accessible contact form with Name, Email, Subject, and Message fields.
 - [x] Validate required fields and email format, show helpful feedback, and never claim a message was sent without a backend; provide an email-link alternative instead.
-- [x] Include a minimal footer with DB monogram, Demil Bajra, relevant links, dynamic current year, and the closing line “Built with curiosity and a commitment to continuous learning.”
+- [x] Include a minimal footer with DB monogram, Demil Bajracharya, relevant links, dynamic current year, and the closing line “Built with curiosity and a commitment to continuous learning.”
 
 ## Accessibility and maintainability
 - [x] Use semantic headings, descriptive links, accessible labels, visible focus indicators, meaningful alternative text where needed, reduced-motion support, and reusable components/data structures.
