@@ -4,14 +4,8 @@ import {
   ArrowRight,
   ArrowUpRight,
   BookOpen,
-  Check,
-  ChevronRight,
   CircleAlert,
   Code2,
-  ExternalLink,
-  GitBranch as Github,
-  Layers3,
-  Link2 as Linkedin,
   Mail,
   MapPin,
   Menu,
@@ -23,6 +17,7 @@ import {
   Wrench,
   X,
 } from 'lucide-react';
+import { personalLinks } from './personal';
 
 type IconType = ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
 
@@ -34,6 +29,14 @@ type FormState = {
 };
 
 const initialForm: FormState = { name: '', email: '', subject: '', message: '' };
+
+function GithubMark({ size = 17 }: { size?: number }) {
+  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.81 5.64-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" /></svg>;
+}
+
+function LinkedinMark({ size = 17 }: { size?: number }) {
+  return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M5.12 3.5A2.62 2.62 0 1 1 5.1 8.74a2.62 2.62 0 0 1 .02-5.24ZM2.75 9.8h4.73V21H2.75V9.8Zm7.7 0h4.54v1.53h.06c.63-1.2 2.17-2.47 4.47-2.47 4.78 0 5.66 3.15 5.66 7.25V21h-4.73v-4.34c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V21h-4.73V9.8Z" /></svg>;
+}
 
 const navItems = [
   { id: 'about', label: 'About' },
@@ -301,8 +304,8 @@ function App() {
               <p>Learning continuously.<br /><strong>Building thoughtfully.</strong></p>
               <div className="hero-aside-links">
                 <span>Find me online</span>
-                <span className="placeholder-link">GitHub pending</span>
-                <span className="placeholder-link">LinkedIn pending</span>
+                <a className="social-inline" href={personalLinks.github} target="_blank" rel="noopener noreferrer"><GithubMark size={13} /> GitHub</a>
+                <a className="social-inline" href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinMark size={13} /> LinkedIn</a>
               </div>
             </div>
           </div>
@@ -397,9 +400,9 @@ function App() {
               <p>My coding activity and projects as I continue learning and building.</p>
             </SectionIntro>
             <div className="github-placeholder">
-              <div className="github-placeholder-top"><Github size={26} strokeWidth={1.3} /><span>github.com / profile pending</span><span className="availability-tag">awaiting URL</span></div>
-              <div className="github-placeholder-note"><Github size={22} strokeWidth={1.3} /><span>Contribution data will appear here once a real GitHub profile is configured.</span></div>
-              <div className="github-placeholder-bottom"><span>Account-specific statistics will appear here once a real GitHub profile is configured.</span><span className="placeholder-link">No fabricated activity</span></div>
+              <a className="github-placeholder-top github-profile-link" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's GitHub profile"><GithubMark size={26} /><span>github.com / Demil-Bajra</span><span className="availability-tag">view profile</span></a>
+              <div className="github-placeholder-note"><GithubMark size={22} /><span>Contribution data will appear here once a live data source is connected.</span></div>
+              <div className="github-placeholder-bottom"><span>Account-specific statistics will appear here when a live data source is connected.</span><span className="placeholder-link">Live data ready later</span></div>
             </div>
           </div>
         </section>
@@ -413,12 +416,12 @@ function App() {
               <div className="contact-details">
                 <div className="contact-lead"><span className="contact-number">08 / 08</span><h3>Have a question,<br /><em>idea, or hello?</em></h3></div>
                 <div className="contact-list">
-                  <div className="contact-item"><span><Mail size={17} /><small>Email</small></span><strong className="muted-value">Email placeholder</strong><span className="muted-arrow">—</span></div>
-                  <div className="contact-item"><span><Github size={17} /><small>GitHub</small></span><strong className="muted-value">Profile URL pending</strong><span className="muted-arrow">—</span></div>
-                  <div className="contact-item"><span><Linkedin size={17} /><small>LinkedIn</small></span><strong className="muted-value">Profile URL pending</strong><span className="muted-arrow">—</span></div>
-                  <div className="contact-item"><span><MapPin size={17} /><small>Location</small></span><strong>Kathmandu, Nepal</strong><span className="muted-arrow">↗</span></div>
+                  <a className="contact-item contact-link-row" href={`mailto:${personalLinks.email}`} aria-label={`Email ${personalLinks.email}`}><span><Mail size={17} /><small>Email</small></span><strong>{personalLinks.email}</strong><ArrowUpRight size={15} /></a>
+                  <a className="contact-item contact-link-row" href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's GitHub profile"><span><GithubMark size={17} /><small>GitHub</small></span><strong>{personalLinks.github.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
+                  <a className="contact-item contact-link-row" href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Open Demil Bajra's LinkedIn profile"><span><LinkedinMark size={17} /><small>LinkedIn</small></span><strong>{personalLinks.linkedin.replace('https://', '')}</strong><ArrowUpRight size={15} /></a>
+                  <div className="contact-item"><span><MapPin size={17} /><small>Location</small></span><strong>{personalLinks.location}</strong><span className="muted-arrow">↗</span></div>
                 </div>
-                <span className="email-alternative is-disabled">Email link available once an address is provided <ArrowUpRight size={15} /></span>
+                <a className="email-alternative" href={`mailto:${personalLinks.email}?subject=Hello%20Demil`}>Prefer email? Write directly <ArrowUpRight size={15} /></a>
               </div>
               <form className="contact-form" onSubmit={handleSubmit} noValidate>
                 <div className="form-header"><span>Drop me a message</span><MessageCircle size={18} strokeWidth={1.5} /></div>
@@ -439,7 +442,7 @@ function App() {
 
       <footer className="site-footer">
         <div className="container footer-top"><button className="brand footer-brand" onClick={() => scrollTo('home')}><span className="brand-mark">DB</span><span className="brand-name">Demil Bajra</span></button><p>Built with curiosity and a commitment to continuous learning.</p><button className="back-top" onClick={() => scrollTo('home')}>Back to top <MoveUpRight size={15} /></button></div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Demil Bajra</span><span>BCA Student · Aspiring Software Developer</span><div><button onClick={() => scrollTo('about')}>About</button><button onClick={() => scrollTo('projects')}>Projects</button><button onClick={() => scrollTo('contact')}>Contact</button></div></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Demil Bajra</span><span>BCA Student · Aspiring Software Developer</span><div><button onClick={() => scrollTo('about')}>About</button><button onClick={() => scrollTo('projects')}>Projects</button><button onClick={() => scrollTo('contact')}>Contact</button><a href={personalLinks.github} target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><GithubMark size={13} /></a><a href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"><LinkedinMark size={13} /></a></div></div>
       </footer>
     </div>
   );
