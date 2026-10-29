@@ -2,6 +2,7 @@
 
 ## Responsive portfolio shell and navigation
 - [x] Deliver a complete, polished, responsive developer portfolio rather than a static screenshot.
+- [x] Keep the homepage hero inside a centered max-width container with consistent horizontal padding, a balanced responsive introduction/editor layout, readable full-name typography, and no clipped or horizontally overflowing content across 1440px, 1280px, 1024px, 768px, 390px, and 320px viewports.
 - [x] Use a consistent content container and restrained dark editorial visual system inspired by the supplied reference, with thin muted borders, readable typography, balanced spacing, and no excessive gradients, glows, particles, or oversized rounded cards.
 - [x] Include a compact sticky navigation with DB branding, functional section links, smooth scrolling, active section awareness, accessible keyboard interaction, and a responsive mobile menu.
 - [x] Prevent the navbar from obscuring section headings and support desktop, tablet, and mobile layouts without horizontal overflow.
