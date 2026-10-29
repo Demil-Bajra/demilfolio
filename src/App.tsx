@@ -303,6 +303,15 @@ function App() {
                 <a href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinMark size={17} /> LinkedIn</a>
               </div>
             </div>
+            <div className="hero-code-panel" aria-label="Decorative code editor showing learning notes">
+              <div className="code-panel-chrome"><span className="chrome-dot dot-red" /><span className="chrome-dot dot-yellow" /><span className="chrome-dot dot-green" /><span className="code-panel-title">learning-notes</span><span className="chrome-actions">−　□　×</span></div>
+              <div className="code-panel-body">
+                <aside className="code-rail"><span>F</span><span>S</span><span>G</span><span>P</span></aside>
+                <div className="code-explorer"><span>EXPLORER</span><b>⌄　LEARNING NOTES</b><small>⌄　python</small><strong>●　fundamentals.py</strong><small>○　ideas.md</small><small>⌄　practice</small><small>○　hello_world.c</small></div>
+                <div className="code-editor"><div className="editor-tab">fundamentals.py <b>×</b></div><pre><span>1</span> # learning, one small step at a time{`\n`}<span>2</span>{`\n`}<span>3</span> <i>def</i> <b>keep_practicing</b>():{`\n`}<span>4</span>     concept = <em>&quot;understand&quot;</em>{`\n`}<span>5</span>     <i>return</i> concept{`\n`}{`\n`}<span>7</span> <b>next_step</b> = keep_practicing(){`\n`}{`\n`}<span>8</span> # build something useful</pre><div className="editor-status">Python · Fundamentals <b>Ln 8, Col 1　UTF-8</b></div></div>
+              </div>
+              <p className="hero-code-caption"><span className="pulse-dot" />A work in progress, by design</p>
+            </div>
           </div>
         </section>
 
