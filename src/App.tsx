@@ -287,32 +287,29 @@ function App() {
 
       <main>
         <section id="home" className="hero-section container section-anchor">
-          <div className="hero-reference-grid">
+          <div className="hero-topline"><span>01 — introduction</span><span>Based in Kathmandu / Nepal</span></div>
+          <div className="hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow accent-eyebrow"><span className="hero-rule" />BCA student · Kathmandu, Nepal</p>
-              <h1><span>Demil</span> <em>Bajracharya</em></h1>
-              <p className="hero-role">Aspiring Software Developer</p>
-              <p className="hero-description">I&apos;m a BCA student from Nepal passionate about programming, problem-solving, and building useful software. I&apos;m strengthening my programming fundamentals, learning Python and C, and exploring how technology can turn ideas into practical digital products.</p>
-              <p className="hero-tagline">Learning continuously. Building thoughtfully.</p>
+              <p className="eyebrow accent-eyebrow"><span className="pulse-dot" />BCA student · aspiring software developer · technology enthusiast</p>
+              <h1>Building a<br /><em>foundation</em><br />for what&apos;s next.</h1>
+              <p className="hero-description">I&apos;m a BCA student from Nepal passionate about programming, problem-solving, and building useful software. I&apos;m currently strengthening my programming fundamentals, learning Python and C, and exploring how technology can turn ideas into practical digital products.</p>
               <div className="hero-actions">
                 <button className="button button-primary" onClick={() => scrollTo('projects')}>View my work <ArrowRight size={17} /></button>
-                <button className="button button-quiet" onClick={() => scrollTo('contact')}>Contact me <ArrowDown size={16} /></button>
-              </div>
-              <div className="hero-socials">
-                <a href={personalLinks.github} target="_blank" rel="noopener noreferrer"><GithubMark size={17} /> GitHub</a>
-                <a href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinMark size={17} /> LinkedIn</a>
+                <button className="button button-quiet" onClick={() => scrollTo('contact')}>Contact me <ArrowUpRight size={16} /></button>
               </div>
             </div>
-            <div className="hero-code-panel" aria-label="Decorative code editor showing learning notes">
-              <div className="code-panel-chrome"><span className="chrome-dot dot-red" /><span className="chrome-dot dot-yellow" /><span className="chrome-dot dot-green" /><span className="code-panel-title">learning-notes</span><span className="chrome-actions">−　□　×</span></div>
-              <div className="code-panel-body">
-                <aside className="code-rail"><span>F</span><span>S</span><span>G</span><span>P</span></aside>
-                <div className="code-explorer"><span>EXPLORER</span><b>⌄　LEARNING NOTES</b><small>⌄　python</small><strong>●　fundamentals.py</strong><small>○　ideas.md</small><small>⌄　practice</small><small>○　hello_world.c</small></div>
-                <div className="code-editor"><div className="editor-tab">fundamentals.py <b>×</b></div><pre><span>1</span> # learning, one small step at a time{`\n`}<span>2</span>{`\n`}<span>3</span> <i>def</i> <b>keep_practicing</b>():{`\n`}<span>4</span>     concept = <em>&quot;understand&quot;</em>{`\n`}<span>5</span>     <i>return</i> concept{`\n`}{`\n`}<span>7</span> <b>next_step</b> = keep_practicing(){`\n`}{`\n`}<span>8</span> # build something useful</pre><div className="editor-status">Python · Fundamentals <b>Ln 8, Col 1　UTF-8</b></div></div>
+            <div className="hero-aside">
+              <div className="hero-aside-number">/ 01</div>
+              <div className="hero-aside-line" />
+              <p>Learning continuously.<br /><strong>Building thoughtfully.</strong></p>
+              <div className="hero-aside-links">
+                <span>Find me online</span>
+                <a className="social-inline" href={personalLinks.github} target="_blank" rel="noopener noreferrer"><GithubMark size={13} /> GitHub</a>
+                <a className="social-inline" href={personalLinks.linkedin} target="_blank" rel="noopener noreferrer"><LinkedinMark size={13} /> LinkedIn</a>
               </div>
-              <p className="hero-code-caption"><span className="pulse-dot" />A work in progress, by design</p>
             </div>
           </div>
+          <button className="scroll-cue" onClick={() => scrollTo('about')} aria-label="Scroll to about section"><span>Scroll to explore</span><ArrowDown size={16} /></button>
         </section>
 
         <section id="about" className="content-section section-anchor">
