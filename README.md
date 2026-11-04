@@ -1,8 +1,8 @@
 # Demil Bajracharya — Developer Portfolio
 
-A responsive personal developer portfolio for **Demil Bajracharya**, a BCA student and aspiring software developer based in Kathmandu, Nepal.
+A responsive personal developer portfolio where I showcase my journey as a BCA student and aspiring software developer based in Kathmandu, Nepal.
 
-The site presents Demil's background, learning journey, technologies, selected projects, learning notes, GitHub status, and contact information through a dark editorial interface with lime-green accents.
+The website highlights my background, learning journey, technical skills, selected projects, learning notes, GitHub activity, and contact information, all presented through a modern dark editorial design with lime-green accents.
 
 ## Live site
 
