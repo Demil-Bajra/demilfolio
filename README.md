@@ -6,7 +6,7 @@ The site presents Demil's background, learning journey, technologies, selected p
 
 ## Live site
 
-[demilfolio-8alwg6iv.manus.space](https://demilfolio-8alwg6iv.manus.space)
+https://demilbajracharya.com.np/
 
 ## Features
 
